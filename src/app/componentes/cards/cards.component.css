@@ -1,0 +1,33 @@
+section{
+    margin: 3px;
+}
+.container-card{
+    display: flex;
+    flex-wrap: wrap;
+}
+h1{
+    text-align: center;
+}
+.card{
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display:  flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 5px;
+}
+.card-texto{
+    width: 250px;
+    padding: 2px;
+    margin: 2px;
+}
+img{
+    width: 120px;
+    height: 200px;
+}
+.aviso-sem-card{
+    text-align: center;
+    margin-top: 50px;
+}

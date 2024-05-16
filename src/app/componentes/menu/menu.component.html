@@ -1,0 +1,23 @@
+
+<section>
+<div class="example-container">
+  <form [formGroup]="valorBlock">
+  <mat-form-field >
+    <mat-label>Nome</mat-label>
+    <input type="text" matInput #nameinput formControlName="name" >
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Select</mat-label>
+    <mat-select type="text" #selection formControlName="selection">
+      <mat-option value="Amonkhet">Amonkhet</mat-option>
+      <mat-option value="Ixalan">Ixalan</mat-option>
+      <mat-option value="Zendikar">Zendikar</mat-option>
+      <mat-option value="Ravnica">Ravnica</mat-option>
+      <mat-option value="Onslaught">Onslaught</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-button color="primary" (click)="buscar()">Buscar</button>
+</form>
+</div>
+</section>

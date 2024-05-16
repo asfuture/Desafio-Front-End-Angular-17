@@ -1,0 +1,30 @@
+section {
+    display: flex;
+    justify-content: center;
+}
+.card{
+    width: 530px;
+    border:  1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+}
+.card-bloco{
+    width: 150px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    display: inline-flex;
+    justify-content: space-around;
+}
+.label-date{
+    border: 1px solid black;
+    float: right;
+    border-radius: 5px;
+    margin: 30px 5px 5px 5px;
+}
+.aviso-sem-bloco{
+    margin: 20px;
+}

@@ -1,0 +1,19 @@
+<app-header></app-header>
+<app-menu (buscarEvent)="buscarBlocos($event)"></app-menu>
+<section>
+    <div class="card" *ngIf="cardBloco.length > 0; else semBloco">
+        <div class="card-bloco" *ngFor="let item of cardBloco">
+            <div>
+                <label for="">{{item.id}}</label><br>
+                <label for="">{{item.name}}</label><br>
+                <label for="">{{item.block}}</label><br>
+                <label class="label-date" for="">{{item.releaseDate}}</label>
+            </div> 
+        </div>
+    </div>
+    <ng-template #semBloco>
+        <p class="aviso-sem-bloco">Não há nenhum card para exibir.</p>
+    </ng-template>
+</section>
+
+<app-footer></app-footer>

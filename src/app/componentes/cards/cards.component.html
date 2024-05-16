@@ -1,0 +1,22 @@
+<app-header></app-header>
+    <section>
+        <button mat-button (click)="voltar()" color="primary">Voltar</button>
+        <button (click)="buscarCartas()"> cartas </button>
+        <h1>Suas cartas do pacote aberto</h1>
+            <div class="container-card" *ngIf="cards.length > 0; else semCards">
+                <div class="card" *ngFor="let item of cards">
+                    <img src='{{item.imageUrl}}' alt="">
+                    <div class="card-texto">
+                        <h3>{{item.name}}</h3>
+                        <h5>{{item.manaCost}}</h5>
+                        <p>{{item.text}}</p>
+                    </div>
+                    <label for="">G</label>
+                </div>
+            </div>
+            <ng-template #semCards>
+                <p class="aviso-sem-card">Não há nenhuma carta para exibir.</p>
+            </ng-template>  
+    </section>
+
+<app-footer></app-footer>

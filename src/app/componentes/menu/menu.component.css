@@ -1,0 +1,15 @@
+section {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 40px;
+  
+}
+
+input{
+    border-radius: 5px;
+    min-width: 150px;
+    max-width: 300px;
+    width: 100%;
+}
+
