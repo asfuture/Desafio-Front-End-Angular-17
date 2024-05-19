@@ -3,7 +3,7 @@
 ### Link do projeto hospedado no Firebase : https://desafio-front-angular17.firebaseapp.com/
 
 
-This project was generated with  https://desafio-angular17-linked.firebaseapp.com/home version 17.1.3.
+This project was generated with  [Angular CLI](https://github.com/angular/angular-cli) version 17.1.3.
 
 ## Development server
 
