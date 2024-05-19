@@ -1,6 +1,6 @@
 # DesafioAngularLinked
 
-### Link do projeto hospedado no Firebase : https://desafio-front-angular17.firebaseapp.com/
+### Link do projeto hospedado no Firebase : https://desafio-angular17-linked.web.app/home
 
 
 This project was generated with  [Angular CLI](https://github.com/angular/angular-cli) version 17.1.3.
