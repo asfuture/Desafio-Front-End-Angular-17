@@ -6,11 +6,23 @@ import { map, tap } from 'rxjs/operators';
 import { BlocoList, CardsList } from '../interface/card-bloco';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class BlocoService {
   private readonly API = 'https://api.magicthegathering.io/v1';
+
+
+  private valorCode:any;
+  setValor(novoValor: any) {
+    this.valorCode = novoValor;
+  }
+
+  getValor() {
+    return this.valorCode;
+  }
+  
 
   constructor(private httpClient: HttpClient) { }
 
@@ -22,15 +34,10 @@ export class BlocoService {
     );
   }
 
-  buscarCartasColecao(id?:number): Observable<CardsList[]> {
-    return this.httpClient.get<CardsList>(`${this.API}/sets/${id}/booster`).pipe(
-      map(response => this.extractCreatureCards(response)),
-    );
-  }
-
   private extractSets(response: any): BlocoList[] {
     if (response && response.sets && Array.isArray(response.sets)) {
       return response.sets.map((set: BlocoList) => ({
+        code:set.code,
         name: set.name,
         block: set.block,
         releaseDate: set.releaseDate
@@ -40,8 +47,17 @@ export class BlocoService {
       throw new Error('A resposta da API não está no formato esperado.');
     }
   }
+  
 
-  private extractCreatureCards(response: any): any[] {
+  buscarCartasColecao(valorCode:any): Observable<CardsList[]> {
+    return this.httpClient.get<CardsList>(`${this.API}/sets/${valorCode}/booster`).pipe(
+      map(response => this.extractCreatureCards(response)),
+    );
+  }
+
+  
+
+  private extractCreatureCards(response: any): CardsList[] {
     const creatureCards: any[] = [];
   
     // Verifica se a resposta contém as cartas

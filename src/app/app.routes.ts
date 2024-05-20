@@ -4,8 +4,8 @@ import { CardBlocoComponent } from './componentes/card-bloco/card-bloco.componen
 
 export const routes: Routes = [
     {
-        path:'', component: CardBlocoComponent, 
-    },
+        path:'',redirectTo:'home',pathMatch:'full'
+    }, 
     {
         path:'home', component: CardBlocoComponent, 
     }
@@ -15,3 +15,5 @@ export const routes: Routes = [
     }
     
 ];
+
+export class AppRoutes{}
