@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from '../footer/footer.component';
 import { HeaderComponent } from '../header/header.component';
@@ -19,11 +19,18 @@ export class CardsComponent {
   cards: CardsList[] = [];
   
   
-  constructor(private blocoService: BlocoService, private router: Router) { }
+  
+  
+  constructor(
+    private blocoService: BlocoService,
+    private router: Router,
+    
+  ) { }
    //this.extractCreatureCards(response);
   buscarCartas() {
     // Chame o serviço BlocoService para buscar os dados das cartas
-    this.blocoService.buscarCartasColecao()
+    const valor = this.blocoService.getValor();
+    this.blocoService.buscarCartasColecao(valor)
       .subscribe(
         (response) => {
           // Atualize a lista de cartas com os dados recebidos da API

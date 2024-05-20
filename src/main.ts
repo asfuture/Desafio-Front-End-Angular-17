@@ -7,7 +7,7 @@ import { provideRouter } from '@angular/router';
 bootstrapApplication(AppComponent, {
   providers: [
     provideAnimationsAsync(),
-    provideRouter(routes ),
+    provideRouter(routes),
   ]
 })
   .catch((err) => console.error(err));

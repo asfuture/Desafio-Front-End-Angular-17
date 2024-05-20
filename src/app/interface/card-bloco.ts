@@ -8,7 +8,7 @@ export class CardsList {
 }
 
 export class BlocoList {
-  id!:number
+  code!:string
   name!:string
   block!:string
   releaseDate!:string
